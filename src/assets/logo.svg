@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="681.87" height="416.87" version="1.1" viewBox="0 0 180.41 110.3" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<clipPath id="a">
+<path d="m0 1080h1080v-1080h-1080z"/>
+</clipPath>
+</defs>
+<g transform="translate(-11.134 -43.122)" fill="#fff" fill-opacity=".90196" stroke="#fff" stroke-opacity=".90196">
+<path d="m111.09 60.052h80.277v-16.753h-80.277z" stroke-width=".35278"/>
+<g transform="matrix(.35278 0 0 -.35278 127.85 106.65)">
+<path d="m0 0h153.4v47.491h-200.89v-179.57h227.56v47.49h-180.07z" fill="#fff" fill-opacity=".90196" stroke="#fff" stroke-opacity=".90196"/>
+</g>
+<g transform="matrix(.35278 0 0 -.35278 -89.16 288.77)">
+<g clip-path="url(#a)" fill="#fff" fill-opacity=".90196" stroke="#fff" stroke-opacity=".90196">
+<g transform="translate(531.2 609.71)" fill="#fff" fill-opacity=".90196" stroke="#fff" stroke-opacity=".90196">
+<path d="m0 0v38.83c0 26.007-21.084 47.09-47.091 47.09h-152.22c-25.912 0-46.923-20.933-47.076-46.81h-0.013v-0.27c0-4e-3 -1e-3 -6e-3 -1e-3 -0.01h1e-3v-84.992c0-26.008 21.083-47.09 47.09-47.09h146.12v-84.993h-140.01v38.829h-53.194v-38.829c0-26.007 21.083-47.091 47.09-47.091h152.22c26.007 0 47.09 21.084 47.09 47.091v84.993c0 26.007-21.083 47.09-47.09 47.09h-146.12v84.992h140.01v-38.83z" fill="#fff" fill-opacity=".90196" stroke="#fff" stroke-opacity=".90196"/>
+</g>
+</g>
+</g>
+</g>
+</svg>

@@ -1,0 +1,23 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.splash {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.splash-logo {
+  width: 250px;
+  height: 250px;
+  animation: fadeIn 1s linear;
+}

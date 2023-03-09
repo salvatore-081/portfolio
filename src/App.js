@@ -1,28 +1,20 @@
-// import logo from './logo.svg';
 import Header from "./components/Header";
+import { Suspense } from "react";
+import Splash from "./components/Splash";
+import About from "./components/About";
+import Experience from "./components/Experience";
+import Landing from "./components/Landing";
 
 function App() {
   return (
-    <main>
-      <Header />
-      <div style={{ height: "3000px" }}>App works!</div>
-    </main>
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
+    <Suspense fallback={<Splash />}>
+      <main>
+        <Header />
+        <Landing />
+        <About />
+        <Experience />
+      </main>
+    </Suspense>
   );
 }
 

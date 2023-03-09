@@ -1,0 +1,49 @@
+select {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0 26px 0 0;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  outline: none;
+  color: var(--secondary-color);
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.select {
+  position: relative;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  gap: 14px;
+  display: flex;
+  align-items: center;
+}
+.select::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--secondary-color);
+}
+
+.select-arrow {
+  position: absolute;
+  right: 0;
+  pointer-events: none;
+  width: 12px;
+  height: 12px;
+}
+
+option {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}

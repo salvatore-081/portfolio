@@ -6,11 +6,13 @@ import Experience from "./components/Experience";
 import Landing from "./components/Landing";
 import SideLinks from "./components/SideLinks";
 import "./styles/Animations.css";
+import Lol from "./components/Lol";
 
 function App() {
   return (
     <Suspense fallback={<Splash />}>
       <main>
+        <Lol />
         <Header />
         <SideLinks />
         <Landing />

@@ -1,0 +1,44 @@
+.side-links {
+  position: fixed;
+  bottom: 0;
+  left: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.side-links::after {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 90px;
+  margin: 0px auto;
+  background-color: var(--secondary-alt-color);
+}
+
+.side-link-fill,
+.side-link-stroke {
+  width: 24px;
+  height: 24px;
+  transition: 0.2s;
+}
+
+.side-link-fill {
+  fill: var(--secondary-alt-color);
+}
+
+.side-link-stroke {
+  stroke: var(--secondary-alt-color);
+}
+
+.side-link-fill:hover,
+.side-link-fill:focus {
+  transform: translateY(-2px) scale(1.1);
+  fill: var(--secondary-color);
+}
+
+.side-link-stroke:hover,
+.side-link-stroke:focus {
+  transform: translateY(-2px) scale(1.1);
+  stroke: var(--secondary-color);
+}

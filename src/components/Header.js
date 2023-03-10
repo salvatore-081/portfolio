@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import useScrollDirection from "../hooks/UseScrollDirection";
-import useScrolledDown from "../hooks/UseScrolledDown";
+import useScrollDirection from "../hooks/useScrollDirection";
+import useScrolledDown from "../hooks/useScrolledDown";
 import "../styles/Header.css";
 import logo from "../assets/logo.svg";
 import { useTranslation } from "react-i18next";
 import Select from "./Select";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-import usePrefersReducedMotion from "../hooks/UsePrefersReducedMotion";
+import usePrefersReducedMotion from "../hooks/usePrefersReducedMotion";
 
 function Header() {
   const [isMounted, setIsMounted] = useState(false);

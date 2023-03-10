@@ -1,5 +1,5 @@
 import "../styles/Select.css";
-import SelectArrow from "../assets/select-arrow.svg";
+import SelectArrow from "../assets/icons/select-arrow.svg";
 
 function Select(props) {
   return (

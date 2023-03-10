@@ -1,6 +1,6 @@
 import "../styles/Splash.css";
 import logo from "../assets/logo.svg";
-import usePrefersReducedMotion from "../hooks/UsePrefersReducedMotion";
+import usePrefersReducedMotion from "../hooks/usePrefersReducedMotion";
 
 function Splash() {
   const prefersReducedMotion = usePrefersReducedMotion();

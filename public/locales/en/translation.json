@@ -10,5 +10,11 @@
     "linkedin": "https://www.linkedin.com/in/salvatore-emilio/",
     "phone": "+393473413737",
     "mail": "info@salvatoreemilio.it"
+  },
+  "Landing": {
+    "hello": "Hello, my name is",
+    "name": "Salvatore.",
+    "subtitle": "I am a developer.",
+    "description": "As a full-stack developer with a passion for ongoing learning and solving complex challenges, I strive to provide innovative and high-quality solutions in both front-end and back-end development. I am constantly seeking new opportunities and challenges that enable me to grow professionally."
   }
 }

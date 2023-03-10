@@ -10,5 +10,11 @@
     "linkedin": "https://www.linkedin.com/in/salvatore-emilio/",
     "phone": "+393473413737",
     "mail": "info@salvatoreemilio.it"
+  },
+  "Landing": {
+    "hello": "Ciao, mi chiamo",
+    "name": "Salvatore.",
+    "subtitle": "Sono uno sviluppatore.",
+    "description": "Sviluppatore full-stack con passione per l'apprendimento continuo e la risoluzione di sfide complesse. Fornisco soluzioni innovative e di alta qualità, sia in ambito front-end che back-end. Sono sempre alla ricerca di nuove opportunità e sfide che mi permettano di crescere professionalmente."
   }
 }

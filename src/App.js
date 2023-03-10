@@ -5,6 +5,7 @@ import About from "./components/About";
 import Experience from "./components/Experience";
 import Landing from "./components/Landing";
 import SideLinks from "./components/SideLinks";
+import "./styles/Animations.css";
 
 function App() {
   return (

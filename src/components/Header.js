@@ -19,6 +19,10 @@ function Header() {
   const NAV_LINKS = Object.keys(t("Header", { returnObjects: true }));
 
   useEffect(() => {
+    if (prefersReducedMotion) {
+      setIsMounted(true);
+      return () => {};
+    }
     const timeout = setTimeout(() => {
       setIsMounted(true);
     }, 100);
@@ -26,7 +30,7 @@ function Header() {
     return () => {
       clearTimeout(timeout);
     };
-  }, []);
+  }, [prefersReducedMotion]);
 
   return (
     <header
@@ -36,64 +40,47 @@ function Header() {
     >
       <img className="logo" src={logo} alt="logo"></img>
       <nav className="navigation">
-        {prefersReducedMotion ? (
-          <>
-            {NAV_LINKS.map((v, i) => (
-              <a key={i} href={`#${v}`} className="navigation-link">
-                <span className="navigation-link-index">{`0${i + 1}.`}</span>
-                <span>{t(`Header.${v}`)}</span>
-              </a>
-            ))}
-            <Select
-              value={i18n.language}
-              options={[
-                { value: "en", label: "English" },
-                { value: "it", label: "Italiano" },
-              ]}
-              onSelectChange={(e) => i18n.changeLanguage(e)}
-            />
-          </>
-        ) : (
-          <>
-            <TransitionGroup component={null}>
-              {isMounted &&
-                NAV_LINKS.map((v, i) => (
-                  <CSSTransition key={i} classNames={"fadedown"} timeout={1000}>
-                    <div style={{ transitionDelay: `${i * 120}ms` }}>
-                      <a href={`#${v}`} className="navigation-link">
-                        <span className="navigation-link-index">{`0${
-                          i + 1
-                        }.`}</span>
-                        <span>{t(`Header.${v}`)}</span>
-                      </a>
-                    </div>
-                  </CSSTransition>
-                ))}
-            </TransitionGroup>
-            <TransitionGroup component={null}>
-              {isMounted && [
+        <>
+          <TransitionGroup component={null}>
+            {isMounted &&
+              NAV_LINKS.map((v, i) => (
                 <CSSTransition
-                  key={NAV_LINKS.length}
-                  classNames={"fadedown"}
+                  key={i}
+                  classNames={`${prefersReducedMotion ? "" : "fadedown"}`}
                   timeout={1000}
                 >
-                  <div
-                    style={{ transitionDelay: `${NAV_LINKS.length * 120}ms` }}
-                  >
-                    <Select
-                      value={i18n.language}
-                      options={[
-                        { value: "en", label: "English" },
-                        { value: "it", label: "Italiano" },
-                      ]}
-                      onSelectChange={(e) => i18n.changeLanguage(e)}
-                    />
+                  <div style={{ transitionDelay: `${i * 120}ms` }}>
+                    <a href={`#${v}`} className="navigation-link">
+                      <span className="navigation-link-index">{`0${
+                        i + 1
+                      }.`}</span>
+                      <span>{t(`Header.${v}`)}</span>
+                    </a>
                   </div>
-                </CSSTransition>,
-              ]}
-            </TransitionGroup>
-          </>
-        )}
+                </CSSTransition>
+              ))}
+          </TransitionGroup>
+          <TransitionGroup component={null}>
+            {isMounted && [
+              <CSSTransition
+                key={NAV_LINKS.length}
+                classNames={`${prefersReducedMotion ? "" : "fadedown"}`}
+                timeout={1000}
+              >
+                <div style={{ transitionDelay: `${NAV_LINKS.length * 120}ms` }}>
+                  <Select
+                    value={i18n.language}
+                    options={[
+                      { value: "en", label: "English" },
+                      { value: "it", label: "Italiano" },
+                    ]}
+                    onSelectChange={(e) => i18n.changeLanguage(e)}
+                  />
+                </div>
+              </CSSTransition>,
+            ]}
+          </TransitionGroup>
+        </>
       </nav>
     </header>
   );

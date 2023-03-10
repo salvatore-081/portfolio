@@ -19,5 +19,8 @@
 .splash-logo {
   width: 250px;
   height: 250px;
+}
+
+.splash-logo-animated {
   animation: fadeIn 1s linear;
 }

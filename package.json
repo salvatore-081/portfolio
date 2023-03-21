@@ -13,7 +13,10 @@
     "react-dom": "^18.2.0",
     "react-i18next": "^12.2.0",
     "react-scripts": "5.0.1",
+    "react-string-replace": "^1.1.0",
     "react-transition-group": "^4.4.5",
+    "scrollreveal": "^4.0.9",
+    "styled-components": "^5.3.8",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

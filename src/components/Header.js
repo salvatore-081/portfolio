@@ -1,12 +1,72 @@
 import React, { useState, useEffect } from "react";
 import useScrollDirection from "../hooks/useScrollDirection";
 import useScrolledDown from "../hooks/useScrolledDown";
-import "../styles/Header.css";
 import logo from "../assets/logo.svg";
 import { useTranslation } from "react-i18next";
 import Select from "./Select";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import usePrefersReducedMotion from "../hooks/usePrefersReducedMotion";
+import styled, { css } from "styled-components";
+import { aHoverAnimation, device } from "../constants";
+
+const StyledHeader = styled.header`
+  position: sticky;
+  z-index: 9999;
+  top: ${(props) => (props.hide ? "-80px" : "0px")};
+  background-color: var(--primary-color-transparent);
+  backdrop-filter: blur(10px);
+  height: 48px;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 16px 32px;
+  gap: 32px;
+
+  ${(props) =>
+    props.shadow &&
+    css`
+      -webkit-box-shadow: 0px 5px 10px 5px #1a1a1d;
+      box-shadow: 0px 5px 10px 5px #1a1a1d;
+    `}
+`;
+
+const StyledImageLogo = styled.img`
+  width: 48px;
+  height: 48px;
+  margin: auto auto auto 0px;
+`;
+
+const StyledNav = styled.nav`
+  display: none;
+  @media ${device.desktop} {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
+`;
+
+const StyledNavA = styled.a`
+  @media ${device.desktop} {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    position: relative;
+    color: var(--secondary-alt-color);
+    cursor: pointer;
+    text-decoration: none;
+    ${aHoverAnimation("-4px")}
+  }
+`;
+
+const StyledNavIndexSpan = styled.span`
+  @media ${device.desktop} {
+    color: var(--secondary-color);
+  }
+`;
 
 function Header() {
   const [isMounted, setIsMounted] = useState(false);
@@ -21,7 +81,7 @@ function Header() {
   useEffect(() => {
     if (prefersReducedMotion) {
       setIsMounted(true);
-      return () => {};
+      return;
     }
     const timeout = setTimeout(() => {
       setIsMounted(true);
@@ -33,13 +93,14 @@ function Header() {
   }, [prefersReducedMotion]);
 
   return (
-    <header
-      className={`header ${scrollDirection === "down" ? "hide" : ""} ${
-        scrolledDown && scrollDirection === "up" ? "shadow" : ""
-      }`}
+    <StyledHeader
+      hide={!prefersReducedMotion && scrollDirection === "down"}
+      shadow={
+        prefersReducedMotion ? true : scrolledDown && scrollDirection === "up"
+      }
     >
-      <img className="logo" src={logo} alt="logo"></img>
-      <nav className="navigation">
+      <StyledImageLogo src={logo} alt="logo"></StyledImageLogo>
+      <StyledNav>
         <>
           <TransitionGroup component={null}>
             {isMounted &&
@@ -50,12 +111,10 @@ function Header() {
                   timeout={1000}
                 >
                   <div style={{ transitionDelay: `${i * 120}ms` }}>
-                    <a href={`#${v}`} className="navigation-link">
-                      <span className="navigation-link-index">{`0${
-                        i + 1
-                      }.`}</span>
+                    <StyledNavA href={`#${v}`}>
+                      <StyledNavIndexSpan>{`0${i + 1}.`}</StyledNavIndexSpan>
                       <span>{t(`Header.${v}`)}</span>
-                    </a>
+                    </StyledNavA>
                   </div>
                 </CSSTransition>
               ))}
@@ -81,8 +140,8 @@ function Header() {
             ]}
           </TransitionGroup>
         </>
-      </nav>
-    </header>
+      </StyledNav>
+    </StyledHeader>
   );
 }
 

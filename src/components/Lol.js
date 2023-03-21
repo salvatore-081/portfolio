@@ -10,7 +10,7 @@ function Lol() {
   useEffect(() => {
     if (prefersReducedMotion) {
       setIsMounted(true);
-      return () => {};
+      return;
     }
     const timeout = setTimeout(() => {
       setIsMounted(true);

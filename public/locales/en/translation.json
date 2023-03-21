@@ -16,5 +16,43 @@
     "name": "Salvatore.",
     "subtitle": "I am a developer.",
     "description": "As a full-stack developer with a passion for ongoing learning and solving complex challenges, I strive to provide innovative and high-quality solutions in both front-end and back-end development. I am constantly seeking new opportunities and challenges that enable me to grow professionally."
+  },
+  "About": {
+    "title": "About me",
+    "paragraphs": [
+      {
+        "text": "Lorem ${0} dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullamco laboriosam, nisi ut aliquid ex ea commodi consequatur.",
+        "vars": {
+          "${0}": {
+            "label": "test",
+            "url": "https://google.it"
+          }
+        }
+      },
+      {
+        "text": "Duis aute irure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      },
+      {
+        "text": "Some skills:"
+      }
+    ],
+    "skills": [
+      {
+        "label": "Go",
+        "url": "https://google.it"
+      },
+      {
+        "label": "Go",
+        "url": "https://google.it"
+      },
+      {
+        "label": "Go",
+        "url": "https://google.it"
+      },
+      {
+        "label": "Go",
+        "url": "https://google.it"
+      }
+    ]
   }
 }

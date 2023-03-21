@@ -3,7 +3,7 @@ import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import Backend from "i18next-http-backend";
 
-i18n
+i18n // eslint-disable-line no-unused-vars
   .use(Backend)
   .use(LanguageDetector)
   .use(initReactI18next)
@@ -13,9 +13,7 @@ i18n
     interpolation: {
       escapeValue: false,
     },
-    // lng: "it",
     supportedLngs: ["en", "it"],
-    // nonExplicitSupportedLngs: true,
   });
 
 export default i18n;

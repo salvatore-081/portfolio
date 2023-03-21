@@ -15,7 +15,7 @@ const StyledSection = styled.section`
   flex-direction: column;
   gap: 40px;
   @media ${device.desktop} {
-    padding: var(--section-padding-desktop);
+    padding: 80px 96px 0 224px;
   }
 `;
 

@@ -54,5 +54,30 @@
         "url": "https://google.it"
       }
     ]
+  },
+  "Experiences": {
+    "title": "Experience",
+    "jobs": [
+      {
+        "position": "position",
+        "employer": {
+          "name": "employer",
+          "url": "https://google.it"
+        },
+        "from": "from",
+        "to": "to",
+        "bullets": ["bullet 1", "bullet 2"]
+      },
+      {
+        "position": "position",
+        "employer": {
+          "name": "employer",
+          "url": "https://google.it"
+        },
+        "from": "from",
+        "to": "to",
+        "bullets": ["bullet 1", "bullet 2"]
+      }
+    ]
   }
 }

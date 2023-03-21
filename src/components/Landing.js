@@ -55,7 +55,7 @@ const StyledP = styled.p`
   transitiondelay: 700ms;
 
   @media ${device.desktop} {
-    margin: 24px 50% 0 0;
+    margin: 24px 40% 0 0;
   }
 `;
 

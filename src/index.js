@@ -15,6 +15,11 @@ const GlobalStyle = createGlobalStyle`
   --section-padding-desktop: 80px 32px 0 160px;
 }
 
+::selection {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
 body {
   margin: 0;
   background: var(--primary-color);

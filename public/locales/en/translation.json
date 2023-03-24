@@ -59,24 +59,34 @@
     "title": "Experience",
     "jobs": [
       {
-        "position": "position",
+        "position": "position1",
         "employer": {
-          "name": "employer",
+          "name": "employer1",
           "url": "https://google.it"
         },
         "from": "from",
         "to": "to",
-        "bullets": ["bullet 1", "bullet 2"]
+        "bullets": ["bullet 11", "bullet 21"]
       },
       {
-        "position": "position",
+        "position": "position2",
         "employer": {
-          "name": "employer",
+          "name": "employer2",
           "url": "https://google.it"
         },
         "from": "from",
         "to": "to",
-        "bullets": ["bullet 1", "bullet 2"]
+        "bullets": ["bullet 12", "bullet 22"]
+      },
+      {
+        "position": "position3",
+        "employer": {
+          "name": "employer3",
+          "url": "https://google.it"
+        },
+        "from": "from",
+        "to": "to",
+        "bullets": ["bullet 13", "bullet 23"]
       }
     ]
   }

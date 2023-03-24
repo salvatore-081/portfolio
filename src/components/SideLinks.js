@@ -107,7 +107,7 @@ function SideLinks() {
             >
               <StyledLinkedin
                 fill="true"
-                prefersReducedMotion={prefersReducedMotion}
+                $prefersReducedMotion={prefersReducedMotion}
               />
             </a>
             <a
@@ -118,7 +118,7 @@ function SideLinks() {
             >
               <StyledGithub
                 fill="true"
-                prefersReducedMotion={prefersReducedMotion}
+                $prefersReducedMotion={prefersReducedMotion}
               />
             </a>
             <a
@@ -128,7 +128,7 @@ function SideLinks() {
             >
               <StyledPhone
                 stroke="true"
-                prefersReducedMotion={prefersReducedMotion}
+                $prefersReducedMotion={prefersReducedMotion}
               />
             </a>
             <a
@@ -138,7 +138,7 @@ function SideLinks() {
             >
               <StyledEmail
                 fill="true"
-                prefersReducedMotion={prefersReducedMotion}
+                $prefersReducedMotion={prefersReducedMotion}
               />
             </a>
           </StyledNav>

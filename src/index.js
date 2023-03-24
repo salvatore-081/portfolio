@@ -8,6 +8,7 @@ import i18n from "./i18n";
 const GlobalStyle = createGlobalStyle`
 :root {
   --primary-color: #202124;
+  --primary-alt-color: #36373a;
   --primary-color-transparent: rgba(32, 33, 36, 0.9);
   --secondary-color: #ffffffe6;
   --secondary-alt-color: #ffffff9f;

@@ -1,9 +1,9 @@
 {
   "Header": {
-    "about": "Su di me",
-    "experience": "Esperienze",
-    "work": "Progetti",
-    "contact": "Contatti"
+    "about": "About",
+    "experience": "Experience",
+    "work": "Work",
+    "contact": "Contact"
   },
   "SideLinks": {
     "github": "https://github.com/salvatore-081",
@@ -12,13 +12,13 @@
     "mail": "info@salvatoreemilio.it"
   },
   "Landing": {
-    "hello": "Ciao, mi chiamo",
+    "hello": "Hello, my name is",
     "name": "Salvatore.",
-    "subtitle": "Sono uno sviluppatore.",
-    "description": "Sviluppatore full-stack con passione per l'apprendimento continuo e la risoluzione di sfide complesse. Fornisco soluzioni innovative e di alta qualità, sia in ambito front-end che back-end. Sono sempre alla ricerca di nuove opportunità e sfide che mi permettano di crescere professionalmente."
+    "subtitle": "I am a developer.",
+    "description": "As a full-stack developer with a passion for ongoing learning and solving complex challenges, I strive to provide innovative and high-quality solutions in both front-end and back-end development. I am constantly seeking new opportunities and challenges that enable me to grow professionally."
   },
   "About": {
-    "title": "Su di me",
+    "title": "About me",
     "paragraphs": [
       {
         "text": "Lorem ${0} dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullamco laboriosam, nisi ut aliquid ex ea commodi consequatur.",
@@ -59,24 +59,105 @@
     "title": "Experience",
     "jobs": [
       {
-        "position": "position",
+        "position": "position1",
         "employer": {
-          "name": "employer",
+          "name": "employer1",
           "url": "https://google.it"
         },
         "from": "from",
         "to": "to",
-        "bullets": ["bullet 1", "bullet 2"]
+        "bullets": ["bullet 11", "bullet 21"]
       },
       {
-        "position": "position",
+        "position": "position2",
         "employer": {
-          "name": "employer",
+          "name": "employer2",
           "url": "https://google.it"
         },
         "from": "from",
         "to": "to",
-        "bullets": ["bullet 1", "bullet 2"]
+        "bullets": ["bullet 12", "bullet 22"]
+      },
+      {
+        "position": "position3",
+        "employer": {
+          "name": "employer3",
+          "url": "https://google.it"
+        },
+        "from": "from",
+        "to": "to",
+        "bullets": ["bullet 13", "bullet 23"]
+      }
+    ]
+  },
+  "Work": {
+    "title": "Some of my personal projects",
+    "projects": [
+      {
+        "name": "Curt",
+        "url": "https://google.it",
+        "image": "placeholder.png",
+        "description": "Duis aute irure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "skills": [
+          {
+            "name": "test1",
+            "url": "https://google.it"
+          },
+          {
+            "name": "test2",
+            "url": "https://google.it"
+          },
+          {
+            "name": "test3",
+            "url": "https://google.it"
+          },
+          {
+            "name": "test4",
+            "url": "https://google.it"
+          },
+          {
+            "name": "test5",
+            "url": "https://google.it"
+          },
+          {
+            "name": "test6",
+            "url": "https://google.it"
+          }
+        ],
+        "github": "https://github.com/salvatore-081"
+      },
+      {
+        "name": "Goup",
+        "url": "https://google.it",
+        "image": "placeholder.png",
+        "description": "Duis aute irure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "skills": [
+          {
+            "name": "test1",
+            "url": "https://google.it"
+          },
+          {
+            "name": "test2",
+            "url": "https://google.it"
+          },
+          {
+            "name": "test3",
+            "url": "https://google.it"
+          },
+          {
+            "name": "test4",
+            "url": "https://google.it"
+          },
+          {
+            "name": "test5",
+            "url": "https://google.it"
+          },
+          {
+            "name": "test6",
+            "url": "https://google.it"
+          }
+        ],
+        "github": "https://github.com/salvatore-081"
       }
     ]
   }

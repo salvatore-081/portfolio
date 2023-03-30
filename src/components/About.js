@@ -10,13 +10,13 @@ import SectionTitle from "./SectionTitle";
 
 const StyledSection = styled.section`
   color: var(--secondary-alt-color);
-  min-height: 100vh;
+  margin: -140px 0 0;
   padding: var(--section-padding);
   display: flex;
   flex-direction: column;
   gap: 40px;
   @media ${device.desktop} {
-    padding: 80px 96px 0 224px;
+    padding: var(--section-padding-desktop);
   }
 `;
 
@@ -89,7 +89,7 @@ const StyledImgContainer = styled.div`
     position: absolute;
     width: 100%;
     height: 100%;
-    border-radius: 10px;
+    border-radius: 8px;
     transition: all 0.5s ease;
   }
   ${(props) =>
@@ -106,7 +106,7 @@ const StyledImg = styled.img`
   height: auto;
   width: 100%;
   max-width: 360px;
-  border-radius: 10px;
+  border-radius: 8px;
   filter: ${(props) =>
     props.prefersReducedMotion ? "none" : "grayscale(100%);"}
   transition: all 0.5s ease;

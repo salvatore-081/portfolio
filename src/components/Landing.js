@@ -75,7 +75,7 @@ function Landing() {
     return () => {
       clearTimeout(timeout);
     };
-  });
+  }, [prefersReducedMotion]);
 
   return (
     <StyledSection>

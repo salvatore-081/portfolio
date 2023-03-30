@@ -5,19 +5,28 @@ import About from "./components/About";
 import Experience from "./components/Experience";
 import Landing from "./components/Landing";
 import SideLinks from "./components/SideLinks";
+import Work from "./components/Work";
+import styled from "styled-components";
 // import Lol from "./components/Lol";
+
+const StyledMain = styled.main`
+  display: flex;
+  flex-direction: column;
+  gap: 140px;
+`;
 
 function App() {
   return (
     <Suspense fallback={<Splash />}>
-      <main>
+      <StyledMain>
         {/* <Lol /> */}
         <Header />
         <SideLinks />
         <Landing />
         <About />
         <Experience />
-      </main>
+        <Work />
+      </StyledMain>
     </Suspense>
   );
 }

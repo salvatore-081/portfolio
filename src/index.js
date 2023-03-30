@@ -12,8 +12,8 @@ const GlobalStyle = createGlobalStyle`
   --primary-color-transparent: rgba(32, 33, 36, 0.9);
   --secondary-color: #ffffffe6;
   --secondary-alt-color: #ffffff9f;
-  --section-padding: 40px 48px 0 100px;
-  --section-padding-desktop: 80px 32px 0 160px;
+  --section-padding: 0 48px 0 100px;
+  --section-padding-desktop: 0 120px 0 200px;
 }
 
 ::selection {
@@ -102,7 +102,6 @@ option {
   transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1),
     transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-
 `;
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

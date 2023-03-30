@@ -9,7 +9,6 @@ import SelectedExperience from "./SelectedExperience";
 
 const StyledSection = styled.section`
   color: var(--secondary-alt-color);
-  min-height: 100vh;
   padding: 120px 48px 0 100px;
   display: flex;
   flex-direction: column;

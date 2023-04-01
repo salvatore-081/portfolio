@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import usePrefersReducedMotion from "../hooks/usePrefersReducedMotion";
 import { useTranslation } from "react-i18next";
 import ScrollReveal from "scrollreveal";
-import { aHoverAnimation, device, ScrollRevealConfig } from "../constants";
+import { device, ScrollRevealConfig } from "../constants";
 import styled from "styled-components";
 import SectionTitle from "./SectionTitle";
 import WorkCard from "./WorkCard";
@@ -12,7 +12,7 @@ const StyledSection = styled.section`
   padding: var(--section-padding);
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 48px;
   @media ${device.desktop} {
     padding: var(--section-padding-desktop);
   }

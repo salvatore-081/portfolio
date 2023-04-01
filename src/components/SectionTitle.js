@@ -40,7 +40,7 @@ function SectionTitle(props) {
     <StyledTitleContainerDiv>
       <StyledTitleIndexSpan>{props.index}</StyledTitleIndexSpan>
       <StyledH1>{props.title}</StyledH1>
-      <StyledLineSpan></StyledLineSpan>
+      {props?.center ? null : <StyledLineSpan></StyledLineSpan>}
     </StyledTitleContainerDiv>
   );
 }

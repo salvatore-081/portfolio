@@ -1,10 +1,8 @@
 import { useEffect, useRef } from "react";
 import usePrefersReducedMotion from "../hooks/usePrefersReducedMotion";
-import { useTranslation } from "react-i18next";
 import ScrollReveal from "scrollreveal";
 import { aHoverAnimation, device, ScrollRevealConfig } from "../constants";
 import styled, { css } from "styled-components";
-import Placholder from "../assets/images/placeholder.png";
 import Curt from "../assets/images/curt.png";
 import Goup from "../assets/images/goup.png";
 import { ReactComponent as Github } from "../assets/icons/github-outlined.svg";
@@ -48,7 +46,7 @@ const StyledGithub = styled(Github)`
 const StyledCardDiv = styled.div`
   width: 100%;
   position: relative;
-  margin: 0 0 80px;
+  margin: 0;
 
   &:before {
     border-radius: 8px;
@@ -67,6 +65,7 @@ const StyledCardDiv = styled.div`
   }
 
   @media ${device.desktop} {
+    margin: 0 0 72px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -171,7 +170,6 @@ const StyledLinksUl = styled(StyledUl)`
 function WorkCard(props) {
   const r = useRef(null);
   const prefersReducedMotion = usePrefersReducedMotion();
-  const { t } = useTranslation();
 
   useEffect(() => {
     if (prefersReducedMotion) {
@@ -181,7 +179,10 @@ function WorkCard(props) {
   }, [prefersReducedMotion]);
 
   return (
-    <StyledCardDiv background={images[props.project.name.toLowerCase()]}>
+    <StyledCardDiv
+      background={images[props.project.name.toLowerCase()]}
+      ref={r}
+    >
       {props.orientation === "RTL" ? (
         <a
           href={props.project.url}

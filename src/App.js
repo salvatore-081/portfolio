@@ -7,6 +7,7 @@ import Landing from "./components/Landing";
 import SideLinks from "./components/SideLinks";
 import Work from "./components/Work";
 import styled from "styled-components";
+import Contact from "./components/Contact";
 // import Lol from "./components/Lol";
 
 const StyledMain = styled.main`
@@ -26,6 +27,7 @@ function App() {
         <About />
         <Experience />
         <Work />
+        <Contact />
       </StyledMain>
     </Suspense>
   );

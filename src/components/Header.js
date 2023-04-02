@@ -119,7 +119,7 @@ const StyledInput = styled.input`
   display: none;
   &:checked ~ ${StyledSpan}:nth-of-type(1) {
     transform-origin: bottom;
-    transform: rotatez(-45deg) translate(-5px, 0.5px);
+    transform: rotatez(-45deg) translate(-5px, 0px);
   }
   &:checked ~ ${StyledSpan}:nth-of-type(2) {
     transform-origin: top;

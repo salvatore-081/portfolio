@@ -68,8 +68,79 @@ const StyledNavIndexSpan = styled.span`
   }
 `;
 
+const StyledLabel = styled.label`
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  width: 48px;
+  cursor: pointer;
+  @media ${device.desktop} {
+    display: none;
+  }
+`;
+
+const StyledSpan = styled.span`
+  background: var(--secondary-color);
+  border-radius: 10px;
+  height: 4px;
+  margin: 6px 0;
+  transition: 0.2s ease;
+
+  &:nth-of-type(1) {
+    width: 50%;
+  }
+
+  &:nth-of-type(2) {
+    width: 100%;
+  }
+
+  &:nth-of-type(3) {
+    width: 75%;
+  }
+`;
+
+const StyledInput = styled.input`
+  display: none;
+  &:checked ~ ${StyledSpan}:nth-of-type(1) {
+    transform-origin: bottom;
+    transform: rotatez(45deg) translate(6px, 2px);
+  }
+  &:checked ~ ${StyledSpan}:nth-of-type(2) {
+    transform-origin: top;
+    transform: rotatez(-45deg);
+  }
+  &:checked ~ ${StyledSpan}:nth-of-type(3) {
+    transform-origin: bottom;
+    width: 50%;
+    transform: translate(21px, -8px) rotatez(45deg);
+  }
+`;
+
+const StyledAside = styled.aside`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  width: 100vw;
+  height: 100vh;
+  outline: 0px;
+  background-color: var(--primary-alt-color);
+  z-index: 9;
+  transform: ${(props) =>
+    props.$show ? "translateX(0vw)" : "translateX(100vw)"};
+  visibility: ${(props) => (props.$show ? "visible" : "hidden")};
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  @media ${device.desktop} {
+    display: none;
+  }
+`;
+
 function Header() {
   const [isMounted, setIsMounted] = useState(false);
+  const [showHamburgerMenu, setShowHamburgermenu] = useState(false);
   const prefersReducedMotion = usePrefersReducedMotion();
 
   const { i18n, t } = useTranslation();
@@ -100,6 +171,20 @@ function Header() {
       }
     >
       <StyledImageLogo src={logo} alt="logo"></StyledImageLogo>
+      <StyledLabel>
+        <StyledInput
+          type="checkbox"
+          checked={showHamburgerMenu}
+          onChange={(e) => {
+            document.body.classList.toggle("noscroll");
+            setShowHamburgermenu(e.target.checked);
+          }}
+        ></StyledInput>
+        <StyledSpan></StyledSpan>
+        <StyledSpan></StyledSpan>
+        <StyledSpan></StyledSpan>
+      </StyledLabel>
+      <StyledAside $show={showHamburgerMenu}>Aside works!</StyledAside>
       <StyledNav>
         <>
           <TransitionGroup component={null}>

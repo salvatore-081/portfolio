@@ -6,53 +6,31 @@ import { ReactComponent as Phone } from "../assets/icons/phone-outlined.svg";
 import { ReactComponent as Email } from "../assets/icons/email-outlined.svg";
 import usePrefersReducedMotion from "../hooks/usePrefersReducedMotion";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-import styled, { css } from "styled-components";
+import { device } from "../constants";
+import styled from "styled-components";
+import { StyledSVG } from "../constants";
 
 const StyledNav = styled.nav`
-  z-index: 9999;
-  position: fixed;
-  bottom: 0;
-  left: 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  transitiondelay: 1s;
+  display: none;
+  @media ${device.desktop} {
+    z-index: 9999;
+    position: fixed;
+    bottom: 0;
+    left: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transitiondelay: 1s;
 
-  &:after {
-    content: "";
-    display: block;
-    width: 2px;
-    height: 90px;
-    margin: 0px auto;
-    background-color: var(--secondary-alt-color);
+    &:after {
+      content: "";
+      display: block;
+      width: 2px;
+      height: 90px;
+      margin: 0px auto;
+      background-color: var(--secondary-alt-color);
+    }
   }
-`;
-
-const StyledSVG = css`
-width: 24px;
-height: 24px;
-transition: 0.2s;
-fill: ${({ fill, prefersReducedMotion }) =>
-  fill === "true"
-    ? prefersReducedMotion
-      ? "var(--secondary-color)"
-      : "var(--secondary-alt-color)"
-    : "inital"};
-stroke: ${({ stroke, prefersReducedMotion }) =>
-  stroke === "true"
-    ? prefersReducedMotion
-      ? "var(--secondary-color)"
-      : "var(--secondary-alt-color)"
-    : "inital"};
-}
-&:hover, &:focus {
-  transform: ${({ prefersReducedMotion }) =>
-    prefersReducedMotion ? "none" : "translateY(-2px) scale(1.1)"};
-  fill: ${({ fill }) =>
-    fill === "true" ? "var(--secondary-color)" : "inital"};
-  stroke: ${({ stroke }) =>
-    stroke === "true" ? "var(--secondary-color)" : "inital"};
-}
 `;
 
 const StyledLinkedin = styled(Linkedin)`

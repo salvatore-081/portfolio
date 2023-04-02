@@ -43,3 +43,30 @@ export function aHoverAnimation(bottom) {
     }
   `;
 }
+
+export const StyledSVG = css`
+width: 24px;
+height: 24px;
+transition: 0.2s;
+fill: ${({ fill, $prefersReducedMotion }) =>
+  fill === "true"
+    ? $prefersReducedMotion
+      ? "var(--secondary-color)"
+      : "var(--secondary-alt-color)"
+    : "inital"};
+stroke: ${({ stroke, $prefersReducedMotion }) =>
+  stroke === "true"
+    ? $prefersReducedMotion
+      ? "var(--secondary-color)"
+      : "var(--secondary-alt-color)"
+    : "inital"};
+}
+&:hover, &:focus {
+  transform: ${({ $prefersReducedMotion }) =>
+    $prefersReducedMotion ? "none" : "translateY(-2px) scale(1.1)"};
+  fill: ${({ fill }) =>
+    fill === "true" ? "var(--secondary-color)" : "inital"};
+  stroke: ${({ stroke }) =>
+    stroke === "true" ? "var(--secondary-color)" : "inital"};
+}
+`;

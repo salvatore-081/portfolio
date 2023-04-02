@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
   --primary-color-transparent: rgba(32, 33, 36, 0.9);
   --secondary-color: #ffffffe6;
   --secondary-alt-color: #ffffff9f;
-  --section-padding: 0 48px 0 100px;
+  --section-padding: 0 32px;
   --section-padding-desktop: 0 120px 0 200px;
 }
 
@@ -28,6 +28,7 @@ body {
   color: var(--secondary-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -101,6 +102,10 @@ option {
   transform: translateY(0px);
   transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1),
     transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.noscroll {
+  overflow: hidden;
 }
 `;
 

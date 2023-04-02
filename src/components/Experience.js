@@ -1,4 +1,4 @@
-import { aHoverAnimation, device, ScrollRevealConfig } from "../constants";
+import { device, ScrollRevealConfig } from "../constants";
 import { useEffect, useRef, useState } from "react";
 import usePrefersReducedMotion from "../hooks/usePrefersReducedMotion";
 import { useTranslation } from "react-i18next";
@@ -9,13 +9,13 @@ import SelectedExperience from "./SelectedExperience";
 
 const StyledSection = styled.section`
   color: var(--secondary-alt-color);
-  padding: 120px 48px 0 100px;
+  padding: var(--section-padding);
   display: flex;
   flex-direction: column;
   gap: 40px;
   overflow-x: hidden;
   @media ${device.desktop} {
-    padding: 80px 128px 0 256px;
+    padding: 80px 128px 0 28%;
   }
 `;
 
@@ -58,6 +58,7 @@ const StyledTabButton = styled.button`
   }
 
   @media ${device.desktop} {
+    padding: 24px 32px;
     flex: auto;
     border-bottom: none;
     border-left: 3px solid var(--secondary-alt-color);

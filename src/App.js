@@ -8,7 +8,7 @@ import SideLinks from "./components/SideLinks";
 import Work from "./components/Work";
 import styled from "styled-components";
 import Contact from "./components/Contact";
-// import Lol from "./components/Lol";
+import Footer from "./components/Footer";
 
 const StyledMain = styled.main`
   display: flex;
@@ -20,7 +20,6 @@ function App() {
   return (
     <Suspense fallback={<Splash />}>
       <StyledMain>
-        {/* <Lol /> */}
         <Header />
         <SideLinks />
         <Landing />
@@ -28,6 +27,7 @@ function App() {
         <Experience />
         <Work />
         <Contact />
+        <Footer />
       </StyledMain>
     </Suspense>
   );

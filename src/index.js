@@ -14,6 +14,7 @@ const GlobalStyle = createGlobalStyle`
   --secondary-alt-color: #ffffff9f;
   --section-padding: 0 32px;
   --section-padding-desktop: 0 120px 0 200px;
+  -webkit-tap-highlight-color: transparent;
 }
 
 #root {

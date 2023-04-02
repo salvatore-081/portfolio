@@ -72,7 +72,7 @@ const StyledLabel = styled.label`
   z-index: 10;
   display: flex;
   flex-direction: column;
-  width: 48px;
+  width: 40px;
   cursor: pointer;
   @media ${device.desktop} {
     display: none;
@@ -82,20 +82,23 @@ const StyledLabel = styled.label`
 const StyledSpan = styled.span`
   background: var(--secondary-color);
   border-radius: 10px;
-  height: 4px;
+  height: 3px;
   margin: 6px 0;
   transition: 0.2s ease;
 
   &:nth-of-type(1) {
     width: 50%;
+    margin: 4px 0 4px auto;
   }
 
   &:nth-of-type(2) {
     width: 100%;
+    margin: 4px 0;
   }
 
   &:nth-of-type(3) {
     width: 75%;
+    margin: 4px 0 4px auto;
   }
 `;
 
@@ -103,16 +106,16 @@ const StyledInput = styled.input`
   display: none;
   &:checked ~ ${StyledSpan}:nth-of-type(1) {
     transform-origin: bottom;
-    transform: rotatez(45deg) translate(6px, 2px);
+    transform: rotatez(-45deg) translate(-5px);
   }
   &:checked ~ ${StyledSpan}:nth-of-type(2) {
     transform-origin: top;
-    transform: rotatez(-45deg);
+    transform: rotatez(45deg);
   }
   &:checked ~ ${StyledSpan}:nth-of-type(3) {
     transform-origin: bottom;
     width: 50%;
-    transform: translate(21px, -8px) rotatez(45deg);
+    transform: translate(-18px, -5px) rotatez(-45deg);
   }
 `;
 
@@ -184,7 +187,7 @@ function Header() {
         <StyledSpan></StyledSpan>
         <StyledSpan></StyledSpan>
       </StyledLabel>
-      <StyledAside $show={showHamburgerMenu}>Aside works!</StyledAside>
+      <StyledAside $show={showHamburgerMenu}></StyledAside>
       <StyledNav>
         <>
           <TransitionGroup component={null}>

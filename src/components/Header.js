@@ -49,22 +49,34 @@ const StyledNav = styled.nav`
   }
 `;
 
+const StyledAsideNav = styled.nav`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 80px;
+`;
+
 const StyledNavA = styled.a`
+  color: var(--secondary-alt-color);
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  align-items: center;
+  font-size: 24px;
+  ${aHoverAnimation("-4px")}
   @media ${device.desktop} {
-    display: flex;
     flex-direction: row;
-    gap: 8px;
-    position: relative;
-    color: var(--secondary-alt-color);
-    cursor: pointer;
-    text-decoration: none;
-    ${aHoverAnimation("-4px")}
+    font-size: 16px;
   }
 `;
 
 const StyledNavIndexSpan = styled.span`
+  color: var(--secondary-color);
+  font-size: 16px;
   @media ${device.desktop} {
-    color: var(--secondary-color);
   }
 `;
 
@@ -106,7 +118,7 @@ const StyledInput = styled.input`
   display: none;
   &:checked ~ ${StyledSpan}:nth-of-type(1) {
     transform-origin: bottom;
-    transform: rotatez(-45deg) translate(-5px);
+    transform: rotatez(-45deg) translate(-4px, 0.5px);
   }
   &:checked ~ ${StyledSpan}:nth-of-type(2) {
     transform-origin: top;
@@ -115,7 +127,7 @@ const StyledInput = styled.input`
   &:checked ~ ${StyledSpan}:nth-of-type(3) {
     transform-origin: bottom;
     width: 50%;
-    transform: translate(-18px, -5px) rotatez(-45deg);
+    transform: translate(-17px, -5px) rotatez(-45deg);
   }
 `;
 
@@ -187,7 +199,23 @@ function Header() {
         <StyledSpan></StyledSpan>
         <StyledSpan></StyledSpan>
       </StyledLabel>
-      <StyledAside $show={showHamburgerMenu}></StyledAside>
+      <StyledAside $show={showHamburgerMenu}>
+        <StyledAsideNav>
+          {NAV_LINKS.map((v, i) => (
+            <StyledNavA
+              key={i}
+              href={`#${v}`}
+              onClick={() => {
+                document.body.classList.toggle("noscroll");
+                setShowHamburgermenu(!showHamburgerMenu);
+              }}
+            >
+              <StyledNavIndexSpan>{`0${i + 1}.`}</StyledNavIndexSpan>
+              <span>{t(`Header.${v}`)}</span>
+            </StyledNavA>
+          ))}
+        </StyledAsideNav>
+      </StyledAside>
       <StyledNav>
         <>
           <TransitionGroup component={null}>

@@ -80,9 +80,9 @@ const StyledImgContainer = styled.div`
   position: relative;
   height: fit-content;
   &:after {
+    top: 8px;
+    left: 8px;
     border: 2px solid var(--secondary-alt-color);
-    top: 16px;
-    left: 16px;
     z-index: -1;
     content: "";
     display: block;
@@ -91,6 +91,10 @@ const StyledImgContainer = styled.div`
     height: 100%;
     border-radius: 8px;
     transition: all 0.5s ease;
+    @media ${device.desktop} {
+      top: 16px;
+      left: 16px;
+    }
   }
   ${(props) =>
     props.prefersReducedMotion
@@ -107,12 +111,16 @@ const StyledImg = styled.img`
   width: 100%;
   max-width: 360px;
   border-radius: 8px;
-  filter: ${(props) =>
-    props.prefersReducedMotion ? "none" : "grayscale(100%);"}
+
   transition: all 0.5s ease;
   content: "";
   &:hover {
     filter: none;
+  }
+
+  @media ${device.desktop} {
+    filter: ${(props) =>
+      props.prefersReducedMotion ? "none" : "grayscale(100%);"};
   }
 `;
 

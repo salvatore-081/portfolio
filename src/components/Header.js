@@ -38,6 +38,7 @@ const StyledImageLogo = styled.img`
   width: 48px;
   height: 48px;
   margin: auto auto auto 0px;
+  z-index: 10;
 `;
 
 const StyledNav = styled.nav`
@@ -127,7 +128,7 @@ const StyledInput = styled.input`
   &:checked ~ ${StyledSpan}:nth-of-type(3) {
     transform-origin: bottom;
     width: 50%;
-    transform: translate(-17px, -5px) rotatez(-45deg);
+    transform: translate(-17px, -4.5px) rotatez(-45deg);
   }
 `;
 

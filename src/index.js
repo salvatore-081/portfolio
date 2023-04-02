@@ -16,6 +16,10 @@ const GlobalStyle = createGlobalStyle`
   --section-padding-desktop: 0 120px 0 200px;
 }
 
+#root {
+  overflow-x: hidden;
+}
+
 ::selection {
   background-color: var(--secondary-color);
   color: var(--primary-color);

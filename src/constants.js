@@ -4,7 +4,7 @@ export const ScrollRevealConfig = (delay = 200, viewFactor = 0.25) => ({
   origin: "bottom",
   distance: "20px",
   duration: 500,
-  delay,
+  delay: 0,
   rotate: { x: 0, y: 0, z: 0 },
   opacity: 0,
   scale: 1,
@@ -12,7 +12,7 @@ export const ScrollRevealConfig = (delay = 200, viewFactor = 0.25) => ({
   mobile: true,
   reset: false,
   useDelay: "always",
-  viewFactor,
+  viewFactor: 0.0,
   viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
 });
 

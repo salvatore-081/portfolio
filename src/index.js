@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
 }
 
 #root {
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 ::selection {

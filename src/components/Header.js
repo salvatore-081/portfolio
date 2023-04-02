@@ -119,7 +119,7 @@ const StyledInput = styled.input`
   display: none;
   &:checked ~ ${StyledSpan}:nth-of-type(1) {
     transform-origin: bottom;
-    transform: rotatez(-45deg) translate(-4px, 0.5px);
+    transform: rotatez(-45deg) translate(-5px, 0.5px);
   }
   &:checked ~ ${StyledSpan}:nth-of-type(2) {
     transform-origin: top;
@@ -128,7 +128,7 @@ const StyledInput = styled.input`
   &:checked ~ ${StyledSpan}:nth-of-type(3) {
     transform-origin: bottom;
     width: 50%;
-    transform: translate(-17px, -4.5px) rotatez(-45deg);
+    transform: translate(-17px, -5px) rotatez(-45deg);
   }
 `;
 

@@ -4,7 +4,7 @@ You should be able to fully customize the application content by editing the [tr
 
 ## How to run?
 
-run: `npm run start ` or make use of the [Dockerfile](./Dockerfile).
+run: `npm run start` or make use of the [Dockerfile](./Dockerfile).
 
 ## Credits
 

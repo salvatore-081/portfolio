@@ -47,10 +47,13 @@ const StyledP = styled.p`
 `;
 
 const StyledA = styled.a`
-  color: var(--secondary-color);
+  color: ${(props) =>
+    props?.$prefersReducedMotion
+      ? "var(--secondary-color)"
+      : "var(--secondary-alt-color)"};
   text-decoration: none;
   position: relative;
-  ${aHoverAnimation("0px")}
+  ${(props) => aHoverAnimation("0px", props?.$prefersReducedMotion)}
 `;
 
 const StyledSkillsContainerDiv = styled.div`
@@ -73,7 +76,13 @@ const StyledPlaceholderDiv = styled.div`
 `;
 
 const StyledSkillA = styled(StyledA)`
-  color: var(--secondary-alt-color);
+  color: var(--secondary-color);
+  @media ${device.desktop} {
+    color: ${(props) =>
+      props?.$prefersReducedMotion
+        ? "var(--secondary-color)"
+        : "var(--secondary-alt-color)"};
+  }
 `;
 
 const StyledImgContainer = styled.div`
@@ -144,7 +153,12 @@ function About() {
           {t("About.paragraphs", { returnObjects: true }).map((v, i) => {
             return (
               <StyledP key={i}>
-                {translationVarReplace(v.text, v.vars, StyledA)}
+                {translationVarReplace(
+                  v.text,
+                  v.vars,
+                  StyledA,
+                  prefersReducedMotion
+                )}
               </StyledP>
             );
           })}
@@ -153,7 +167,12 @@ function About() {
               return (
                 <StyledSkillContainerDiv key={i}>
                   <StyledPlaceholderDiv>▹</StyledPlaceholderDiv>
-                  <StyledSkillA href={v.url}>{v.label}</StyledSkillA>
+                  <StyledSkillA
+                    $prefersReducedMotion={prefersReducedMotion}
+                    href={v.url}
+                  >
+                    {v.label}
+                  </StyledSkillA>
                 </StyledSkillContainerDiv>
               );
             })}

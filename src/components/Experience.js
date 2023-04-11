@@ -36,6 +36,8 @@ const StyledTabsContainerDiv = styled.div`
   overflow-x: scroll;
   @media ${device.desktop} {
     flex-direction: column;
+    align-self: flex-start;
+    flex-shrink: 0;
   }
 `;
 
@@ -78,9 +80,9 @@ const StyledSelectedHighlightDiv = styled.div`
   transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
 
   @media ${device.desktop} {
-    transform: translateY(calc(${(props) => props.selectedIndex} * 47.2px));
+    transform: translateY(calc(${(props) => props.selectedIndex} * 63.2px));
     width: 2px;
-    height: 47.2px;
+    height: 63.2px;
     bottom: auto;
     top: 0;
   }

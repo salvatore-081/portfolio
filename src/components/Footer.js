@@ -49,7 +49,7 @@ const StyledIconsDiv = styled.div`
 const StyledP = styled.p`
   margin: 0;
   text-align: center;
-  color: var(--secondary-alt-color);
+  color: var(--secondary-color);
 `;
 
 function Footer() {

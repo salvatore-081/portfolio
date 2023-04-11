@@ -20,7 +20,7 @@ export const device = {
   desktop: "(min-width: 768px)",
 };
 
-export function aHoverAnimation(bottom) {
+export function aHoverAnimation(bottom, $prefersReducedMotion) {
   return css`
     &:after {
       content: "";
@@ -30,7 +30,7 @@ export function aHoverAnimation(bottom) {
       bottom: ${bottom};
       left: 0;
       background-color: var(--secondary-color);
-      transform: scaleX(0);
+      transform: scaleX(${$prefersReducedMotion ? "1" : "0"});
       transform-origin: bottom right;
       transition: transform 0.25s ease-out;
     }

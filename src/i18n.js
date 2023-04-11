@@ -9,7 +9,7 @@ i18n // eslint-disable-line no-unused-vars
   .use(initReactI18next)
   .init({
     fallbackLng: "en",
-    debug: true,
+    debug: false,
     interpolation: {
       escapeValue: false,
     },

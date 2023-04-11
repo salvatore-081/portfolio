@@ -5,41 +5,54 @@ import { aHoverAnimation, device, ScrollRevealConfig } from "../constants";
 import styled, { css } from "styled-components";
 import Curt from "../assets/images/curt.png";
 import Goup from "../assets/images/goup.png";
+import Portfolio from "../assets/images/portfolio.png";
 import { ReactComponent as Github } from "../assets/icons/github-outlined.svg";
+import { ReactComponent as Docker } from "../assets/icons/docker-outlined.svg";
 
 const images = {
   curt: Curt,
   goup: Goup,
+  portfolio: Portfolio,
 };
 
 const StyledSVG = css`
 width: 24px;
 height: 24px;
 transition: 0.2s;
-fill: ${({ fill, prefersReducedMotion }) =>
-  fill === "true"
-    ? prefersReducedMotion
-      ? "var(--secondary-color)"
-      : "var(--secondary-alt-color)"
-    : "inital"};
-stroke: ${({ stroke, prefersReducedMotion }) =>
-  stroke === "true"
-    ? prefersReducedMotion
-      ? "var(--secondary-color)"
-      : "var(--secondary-alt-color)"
-    : "inital"};
+fill: ${({ fill }) => (fill === "true" ? "var(--secondary-color)" : "inital")};
+stroke: ${({ stroke }) =>
+  stroke === "true" ? "var(--secondary-color)" : "inital"};
 }
 &:hover, &:focus {
-  transform: ${({ prefersReducedMotion }) =>
-    prefersReducedMotion ? "none" : "scale(1.1)"};
+  transform: ${({ $prefersReducedMotion }) =>
+    $prefersReducedMotion ? "none" : "scale(1.1)"};
   fill: ${({ fill }) =>
     fill === "true" ? "var(--secondary-color)" : "inital"};
   stroke: ${({ stroke }) =>
     stroke === "true" ? "var(--secondary-color)" : "inital"};
 }
+@media ${device.desktop}{
+fill: ${({ fill, $prefersReducedMotion }) =>
+  fill === "true"
+    ? $prefersReducedMotion
+      ? "var(--secondary-color)"
+      : "var(--secondary-alt-color)"
+    : "inital"};
+stroke: ${({ stroke, $prefersReducedMotion }) =>
+  stroke === "true"
+    ? $prefersReducedMotion
+      ? "var(--secondary-color)"
+      : "var(--secondary-alt-color)"
+    : "inital"};
+}
+}
 `;
 
 const StyledGithub = styled(Github)`
+  ${StyledSVG}
+`;
+
+const StyledDocker = styled(Docker)`
   ${StyledSVG}
 `;
 
@@ -104,7 +117,8 @@ const StyledDesktopImg = styled.img`
     width: 100%;
     height: auto;
     display: block;
-    filter: grayscale(100%);
+    filter: ${(props) =>
+      props.$prefersReducedMotion ? "none" : "grayscale(100%)"};
     transition: all 0.5s ease 0s;
     &:hover {
       filter: none;
@@ -122,7 +136,7 @@ const StyledTitleA = styled.a`
   position: relative;
   font-size: 32px;
   font-weight: bold;
-  ${aHoverAnimation("1px")}
+  ${(props) => aHoverAnimation("1px", props?.$prefersReducedMotion)}
 `;
 
 const StyledP = styled.p`
@@ -151,10 +165,16 @@ const StyledUl = styled.ul`
 const StyledLi = styled.li``;
 
 const StyledLiA = styled.a`
-  color: var(--secondary-alt-color);
+  color: var(--secondary-color);
   text-decoration: none;
   position: relative;
-  ${aHoverAnimation("-1px")}
+  ${(props) => aHoverAnimation("-1px", props?.$prefersReducedMotion)}
+  @media ${device.desktop} {
+    color: ${(props) =>
+      props?.$prefersReducedMotion
+        ? "var(--secondary-color)"
+        : "var(--secondary-alt-color)"};
+  }
 `;
 
 const StyledLinksUl = styled(StyledUl)`
@@ -191,6 +211,7 @@ function WorkCard(props) {
           rel="noopener noreferrer"
         >
           <StyledDesktopImg
+            $prefersReducedMotion={prefersReducedMotion}
             src={images[props.project.name.toLowerCase()]}
           ></StyledDesktopImg>
         </a>
@@ -198,6 +219,7 @@ function WorkCard(props) {
       <StyledCardContentDiv orientation={props.orientation}>
         <StyledH1>
           <StyledTitleA
+            $prefersReducedMotion={prefersReducedMotion}
             href={props.project.url}
             target="_blank"
             alt={`${props.project.name} link`}
@@ -211,6 +233,7 @@ function WorkCard(props) {
           {props.project.skills.map((v, i) => (
             <StyledLi key={i}>
               <StyledLiA
+                $prefersReducedMotion={prefersReducedMotion}
                 href={v.url}
                 target="_blank"
                 alt={v.name}
@@ -224,7 +247,6 @@ function WorkCard(props) {
         <StyledLinksUl orientation={props.orientation}>
           {props.project?.github && (
             <li>
-              {" "}
               <a
                 href={props.project.github}
                 target="_blank"
@@ -232,6 +254,21 @@ function WorkCard(props) {
                 rel="noopener noreferrer"
               >
                 <StyledGithub
+                  fill="true"
+                  $prefersReducedMotion={prefersReducedMotion}
+                />
+              </a>
+            </li>
+          )}
+          {props.project?.docker && (
+            <li>
+              <a
+                href={props.project.docker}
+                target="_blank"
+                alt="DockerHub"
+                rel="noopener noreferrer"
+              >
+                <StyledDocker
                   fill="true"
                   $prefersReducedMotion={prefersReducedMotion}
                 />
@@ -248,6 +285,7 @@ function WorkCard(props) {
           rel="noopener noreferrer"
         >
           <StyledDesktopImg
+            $prefersReducedMotion={prefersReducedMotion}
             src={images[props.project.name.toLowerCase()]}
           ></StyledDesktopImg>
         </a>

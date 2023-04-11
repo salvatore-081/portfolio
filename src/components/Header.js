@@ -58,7 +58,10 @@ const StyledAsideNav = styled.nav`
 `;
 
 const StyledNavA = styled.a`
-  color: var(--secondary-alt-color);
+  color: ${(props) =>
+    props?.$prefersReducedMotion
+      ? "var(--secondary-color)"
+      : "var(--secondary-alt-color)"};
   display: flex;
   gap: 8px;
   flex-direction: column;
@@ -67,7 +70,7 @@ const StyledNavA = styled.a`
   text-decoration: none;
   align-items: center;
   font-size: 24px;
-  ${aHoverAnimation("-4px")}
+  ${(props) => aHoverAnimation("-4px", props?.$prefersReducedMotion)}
   @media ${device.desktop} {
     flex-direction: row;
     font-size: 16px;
@@ -228,7 +231,10 @@ function Header() {
                   timeout={1000}
                 >
                   <div style={{ transitionDelay: `${i * 120}ms` }}>
-                    <StyledNavA href={`#${v}`}>
+                    <StyledNavA
+                      href={`#${v}`}
+                      $prefersReducedMotion={prefersReducedMotion}
+                    >
                       <StyledNavIndexSpan>{`0${i + 1}.`}</StyledNavIndexSpan>
                       <span>{t(`Header.${v}`)}</span>
                     </StyledNavA>

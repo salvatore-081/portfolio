@@ -32,21 +32,33 @@ const StyledButton = styled.button`
   width: 100%;
   padding: 16px 24px;
   background-color: transparent;
-  color: inherit;
   font-size: 24px;
   font-weight: bold;
   font-family: inherit;
-  border: 2px solid var(--secondary-alt-color);
+  color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
   border-radius: 8px;
   transition: all 1s ease;
   cursor: pointer;
+  background-color: var(--primary-alt-color);
 
-  &:hover {
+  ${(props) =>
+    props.$prefersReducedMotion
+      ? ""
+      : `&:hover {
     background-color: var(--primary-alt-color);
     border: 2px solid var(--secondary-color);
     color: var(--secondary-color);
-  }
+  }`}
+
   @media ${device.desktop} {
+    ${(props) =>
+      props.$prefersReducedMotion
+        ? ""
+        : `    background-color: inherit;
+        color: inherit;
+    border: 2px solid var(--secondary-alt-color);`}
+
     width: auto;
     max-width: 240px;
   }
@@ -73,6 +85,7 @@ function Contact() {
       ></SectionTitle>
       <StyledP>{t("Contact.text")}</StyledP>
       <StyledButton
+        $prefersReducedMotion={prefersReducedMotion}
         type="button"
         onClick={() => {
           window.location.href = `mailto:${t("SideLinks.mail")}`;

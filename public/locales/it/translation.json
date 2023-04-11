@@ -1,9 +1,9 @@
 {
   "Header": {
-    "about": "About",
-    "experience": "Experience",
-    "work": "Work",
-    "contact": "Contact"
+    "about": "Su di me",
+    "experience": "Esperienza",
+    "work": "Progetti",
+    "contact": "Contatti"
   },
   "SideLinks": {
     "github": "https://github.com/salvatore-081",
@@ -12,252 +12,145 @@
     "mail": "info@salvatoreemilio.it"
   },
   "Landing": {
-    "hello": "Hello, my name is",
-    "name": "Salvatore.",
-    "subtitle": "I am a developer.",
-    "description": "As a full-stack developer with a passion for ongoing learning and solving complex challenges, I strive to provide innovative and high-quality solutions in both front-end and back-end development. I am constantly seeking new opportunities and challenges that enable me to grow professionally."
+    "hello": "Ciao, sono",
+    "name": "Salvatore Emilio.",
+    "subtitle": "Sono uno sviluppatore.",
+    "description": "Ho esperienza nella creazione di soluzioni software innovative e personalizzate. Sono specializzato nello sviluppo Full Stack utilizzando tecnologie all'avanguardia."
   },
   "About": {
-    "title": "About me",
+    "title": "Su di me",
     "paragraphs": [
       {
-        "text": "Lorem ${0} dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullamco laboriosam, nisi ut aliquid ex ea commodi consequatur.",
-        "vars": {
-          "${0}": {
-            "label": "test",
-            "url": "https://google.it"
-          }
-        }
+        "text": "Sto vivendo il sogno di fare della mia passione il mio lavoro. Sono appassionato di tecnologia da quando ho memoria e e mi sono avvicinato al mondo dello sviluppo software un po' per gioco ed un po' per curiosità. Ho mosso i miei primi passi con Java ma attualmente ho avuto modo di utilizzare svariate tecnologie grazie al lavoro ed ai miei progetti personali."
       },
       {
-        "text": "Duis aute irure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-      },
-      {
-        "text": "Some skills:"
+        "text": "Ecco alcune tecnologie a cui mi sto interessando ultimamente:"
       }
     ],
     "skills": [
       {
         "label": "Go",
-        "url": "https://google.it"
+        "url": "https://go.dev/"
       },
       {
-        "label": "Go",
-        "url": "https://google.it"
+        "label": "React",
+        "url": "https://reactjs.org/"
       },
       {
-        "label": "Go",
-        "url": "https://google.it"
+        "label": "Angular",
+        "url": "https://angular.io/"
       },
       {
-        "label": "Go",
-        "url": "https://google.it"
+        "label": "Flutter",
+        "url": "https://flutter.dev/"
+      },
+      {
+        "label": "Docker",
+        "url": "https://www.docker.com/"
+      },
+      {
+        "label": "Docker Compose",
+        "url": "https://docs.docker.com/compose/"
       }
     ]
   },
   "Experiences": {
-    "title": "Experience",
+    "title": "Esperienza",
     "jobs": [
       {
-        "position": "position1",
+        "position": "Consulente IT",
         "employer": {
-          "name": "employer1",
-          "url": "https://google.it"
+          "name": "itconsulting",
+          "url": "https://www.itconsultingsrl.it/"
         },
-        "from": "from",
-        "to": "to",
-        "bullets": ["bullet 11", "bullet 21"]
+        "from": "2021-09",
+        "to": "presente",
+        "bullets": [
+          "Progettazione e sviluppo di soluzioni software personalizzate"
+        ]
       },
       {
-        "position": "position2",
+        "position": "Junior FullStack Developer",
         "employer": {
-          "name": "employer2",
-          "url": "https://google.it"
+          "name": "Evja",
+          "url": "https://www.evja.eu/"
         },
-        "from": "from",
-        "to": "to",
-        "bullets": ["bullet 12", "bullet 22"]
-      },
-      {
-        "position": "position3",
-        "employer": {
-          "name": "employer3",
-          "url": "https://google.it"
-        },
-        "from": "from",
-        "to": "to",
-        "bullets": ["bullet 13", "bullet 23"]
+        "from": "2020-08",
+        "to": "2021-09",
+        "bullets": [
+          "Ricerca e sviluppo",
+          "Sviluppo di un sistema di monitoraggio in tempo reale e supporto decisionale per aziende agricole",
+          "Sviluppo e progettazione di una SPA"
+        ]
       }
     ]
   },
   "Work": {
-    "title": "Some of my personal projects",
+    "title": "Alcuni dei miei progetti",
     "projects": [
       {
-        "name": "Curt",
-        "url": "https://google.it",
-        "image": "placeholder.png",
-        "description": "Duis aute irure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "name": "Portfolio",
+        "url": "https://github.com/salvatore-081/portfolio",
+        "description": "Portfolio web completamente personalizzabile",
         "skills": [
           {
-            "name": "test1",
-            "url": "https://google.it"
+            "name": "JavaScript",
+            "url": "https://developer.mozilla.org/docs/Web/JavaScript"
           },
           {
-            "name": "test2",
-            "url": "https://google.it"
+            "name": "React",
+            "url": "https://reactjs.org/"
           },
           {
-            "name": "test3",
-            "url": "https://google.it"
-          },
-          {
-            "name": "test4",
-            "url": "https://google.it"
-          },
-          {
-            "name": "test5",
-            "url": "https://google.it"
-          },
-          {
-            "name": "test6",
-            "url": "https://google.it"
+            "name": "styled-components",
+            "url": "https://styled-components.com/"
           }
         ],
-        "github": "https://github.com/salvatore-081"
+        "github": "https://github.com/salvatore-081/portfolio"
       },
       {
         "name": "Curt",
-        "url": "https://google.it",
-        "image": "placeholder.png",
-        "description": "Duis aute irure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "url": "https://github.com/salvatore-081/curt",
+        "description": "Applicazione free ed open-source che permette di ridurre le dimensioni di una qualsiasi URL.",
         "skills": [
           {
-            "name": "test1",
-            "url": "https://google.it"
+            "name": "Go",
+            "url": "https://go.dev/"
           },
           {
-            "name": "test2",
-            "url": "https://google.it"
+            "name": "BadgerDB",
+            "url": "https://github.com/dgraph-io/badger"
           },
           {
-            "name": "test3",
-            "url": "https://google.it"
-          },
-          {
-            "name": "test4",
-            "url": "https://google.it"
-          },
-          {
-            "name": "test5",
-            "url": "https://google.it"
-          },
-          {
-            "name": "test6",
-            "url": "https://google.it"
+            "name": "Gin",
+            "url": "https://github.com/gin-gonic/gin"
           }
         ],
-        "github": "https://github.com/salvatore-081"
-      },
-      {
-        "name": "Curt",
-        "url": "https://google.it",
-        "image": "placeholder.png",
-        "description": "Duis aute irure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "skills": [
-          {
-            "name": "test1",
-            "url": "https://google.it"
-          },
-          {
-            "name": "test2",
-            "url": "https://google.it"
-          },
-          {
-            "name": "test3",
-            "url": "https://google.it"
-          },
-          {
-            "name": "test4",
-            "url": "https://google.it"
-          },
-          {
-            "name": "test5",
-            "url": "https://google.it"
-          },
-          {
-            "name": "test6",
-            "url": "https://google.it"
-          }
-        ],
-        "github": "https://github.com/salvatore-081"
-      },
-      {
-        "name": "Curt",
-        "url": "https://google.it",
-        "image": "placeholder.png",
-        "description": "Duis aute irure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "skills": [
-          {
-            "name": "test1",
-            "url": "https://google.it"
-          },
-          {
-            "name": "test2",
-            "url": "https://google.it"
-          },
-          {
-            "name": "test3",
-            "url": "https://google.it"
-          },
-          {
-            "name": "test4",
-            "url": "https://google.it"
-          },
-          {
-            "name": "test5",
-            "url": "https://google.it"
-          },
-          {
-            "name": "test6",
-            "url": "https://google.it"
-          }
-        ],
-        "github": "https://github.com/salvatore-081"
+        "github": "https://github.com/salvatore-081/curt",
+        "docker": "https://hub.docker.com/r/salvatoreemilio/curt"
       },
       {
         "name": "Goup",
         "url": "https://google.it",
-        "image": "placeholder.png",
-        "description": "Duis aute irure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "description": "Applicazione free ed open-source per effettuare backup di volumi docker.",
         "skills": [
           {
-            "name": "test1",
-            "url": "https://google.it"
+            "name": "Go",
+            "url": "https://go.dev/"
           },
           {
-            "name": "test2",
-            "url": "https://google.it"
-          },
-          {
-            "name": "test3",
-            "url": "https://google.it"
-          },
-          {
-            "name": "test4",
-            "url": "https://google.it"
-          },
-          {
-            "name": "test5",
-            "url": "https://google.it"
-          },
-          {
-            "name": "test6",
-            "url": "https://google.it"
+            "name": "Docker",
+            "url": "https://www.docker.com/"
           }
         ],
-        "github": "https://github.com/salvatore-081"
+        "github": "https://github.com/salvatore-081/goup",
+        "docker": "https://hub.docker.com/r/salvatoreemilio/goup"
       }
     ]
+  },
+  "Contact": {
+    "title": "Contatti",
+    "text": "Al momento non sono attivamente alla ricerca di nuove opportunità lavorative ma se hai voglia di presentarmi un progetto o un'idea sarò felice di dedicarti il mio tempo.",
+    "ctaLabel": "Scrivimi!"
   }
 }

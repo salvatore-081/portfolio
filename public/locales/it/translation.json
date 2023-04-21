@@ -58,13 +58,26 @@
     "title": "Esperienza",
     "jobs": [
       {
+        "position": "Senior Developer",
+        "employer": {
+          "name": "Dilaxia",
+          "url": "https://www.dilaxia.com/"
+        },
+        "from": "2023-04",
+        "to": "presente",
+        "bullets": [
+          "Progettazione e sviluppo di soluzioni software personalizzate",
+          "Formazione e coaching per le figure junior"
+        ]
+      },
+      {
         "position": "Consulente IT",
         "employer": {
           "name": "itconsulting",
           "url": "https://www.itconsultingsrl.it/"
         },
         "from": "2021-09",
-        "to": "presente",
+        "to": "2023-04",
         "bullets": [
           "Progettazione e sviluppo di soluzioni software personalizzate"
         ]

@@ -1,0 +1,31 @@
+version: "3.8"
+
+name: portfolio
+
+services:
+  nginx:
+    build: .
+    container_name: nginx_portfolio
+    restart: unless-stopped
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/nginx.default.conf:/etc/nginx/conf.d/default.conf
+    networks:
+      - kojinteki-traefik
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1024m"
+        max-file: "3"
+        tag: "{{.Name}}"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.services.nginx_portfolio.loadbalancer.server.port=17000"
+      - "traefik.http.routers.nginx_portfolio.rule=Host(`salvatoreemilio.it`) || Host(`www.salvatoreemilio.it`)"
+      - "traefik.http.routers.nginx_portfolio.tls.certresolver=myresolver"
+      - "traefik.http.routers.nginx_portfolio.entrypoints=websecure"
+
+networks:
+  kojinteki-traefik:
+    external: true
+    name: kojinteki-traefik

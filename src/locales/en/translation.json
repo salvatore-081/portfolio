@@ -1,0 +1,250 @@
+{
+  "meta": {
+    "title": "Salvatore Emilio · Technical Lead · Engineering Manager",
+    "description": "Technical Lead and Engineering Manager: I lead development teams that ship software with an AI-native approach.",
+    "locale": "en_US"
+  },
+  "nav": {
+    "skip": "Skip to content",
+    "home": "Salvatore Emilio, back to top",
+    "method": "Method",
+    "experience": "Experience",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact",
+    "menu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "IT",
+    "languageLabel": "Leggi il sito in italiano",
+    "theme": "Toggle light/dark theme",
+    "primaryLabel": "Main navigation",
+    "mobileLabel": "Mobile navigation"
+  },
+  "links": {
+    "email": "info@salvatoreemilio.it",
+    "phone": "+39 347 341 37 37",
+    "phoneHref": "+393473413737",
+    "linkedin": "https://www.linkedin.com/in/salvatore-emilio/",
+    "github": "https://github.com/salvatore-081",
+    "cv": "https://cloud.salvatoreemilio.it/s/6HXkpKP8yQMJby4"
+  },
+  "hero": {
+    "name": "Salvatore Emilio",
+    "role": "Technical Lead · Engineering Manager",
+    "claim": "I lead development teams that ship software with an AI-native approach.",
+    "text": "I frame the problem, have AI agents produce the code and own the quality of the result through tests, review criteria and shared metrics.",
+    "photoAlt": "Portrait of Salvatore Emilio",
+    "write": "Get in touch",
+    "linkedin": "LinkedIn",
+    "cv": "Download CV",
+    "stats": [
+      {
+        "value": "4–8",
+        "label": "people on the team I lead"
+      },
+      {
+        "value": "~4",
+        "label": "projects shipped to production per year"
+      },
+      {
+        "value": "6",
+        "label": "years in software, 3 as Technical Lead"
+      },
+      {
+        "value": "~3×",
+        "label": "my productivity with the AI-native method"
+      }
+    ]
+  },
+  "method": {
+    "kicker": "Method",
+    "title": "How I work",
+    "intro": "Today the programming language matters less than the ability to lead people and agents to a result I answer for.",
+    "steps": [
+      {
+        "title": "I frame the problem",
+        "text": "Goals, constraints, architecture and acceptance criteria. This is the part that decides whether a project succeeds, and it stays with me."
+      },
+      {
+        "title": "Agents produce the code",
+        "text": "Analysis, development, testing and peer review are carried out by AI agents that I direct and verify step by step. I use the same agents to build internal tooling, such as agents that resolve issues on their own."
+      },
+      {
+        "title": "I own the quality",
+        "text": "Tests, review criteria and shared metrics. I own releases and scope and remain accountable for technical decisions."
+      }
+    ],
+    "outcome": "With this method my productivity has roughly tripled and quality has improved. I introduced it in the team I lead and I help bring it to the rest of the company, from the way teams work to internal tooling.",
+    "interest": "What interests me is the point where technology and organization meet: how roles, processes and responsibilities change once AI agents are part of everyday work."
+  },
+  "experience": {
+    "kicker": "Experience",
+    "title": "Where I have worked",
+    "jobs": [
+      {
+        "company": "Dilaxia",
+        "url": "https://www.dilaxia.com/",
+        "place": "Italy · Remote",
+        "dates": "04/2023 – present",
+        "roles": [
+          {
+            "title": "Technical Lead",
+            "dates": "10/2023 – present",
+            "blocks": [
+              {
+                "label": "Team, people and delivery",
+                "text": "I lead a team of 4 to 8 developers depending on active projects and ship an average of 4 projects a year to production, in sectors such as logistics, transportation, public healthcare, energy and fashion. I handle hiring, onboarding and 1:1s, work in Scrum and manage stakeholders, from client to PM. I led a logistics platform on serverless cloud to production, end to end."
+              },
+              {
+                "label": "AI-native method",
+                "text": "I introduced an AI-agent-based way of working in the team, from analysis to peer review, and defined its review criteria and metrics. When production issues arise, I work back from the data to the root cause."
+              },
+              {
+                "label": "AI transition and pre-sales",
+                "text": "I have built internal tools such as autonomous agents for issue resolution and a shared library of plugins and skills, and I am defining a framework to assess AI usage across company roles. For clients I deliver generative AI solutions (computer vision, document extraction and classification, RAG, multi-agent systems) and prepare about 10 estimates a year for new prospects."
+              }
+            ]
+          },
+          {
+            "title": "Senior Developer",
+            "dates": "04/2023 – 10/2023",
+            "text": "Lead developer on the e-commerce project of an international luxury fashion group, the role I was hired for; mentored junior developers."
+          }
+        ]
+      },
+      {
+        "company": "Itconsulting",
+        "url": "https://www.itconsultingsrl.it/",
+        "place": "Italy · Remote",
+        "dates": "09/2021 – 04/2023",
+        "roles": [
+          {
+            "title": "Frontend developer for Edison Energia, via Power Reply",
+            "dates": "09/2021 – 01/2023",
+            "text": "Development of the web and mobile app of one of Italy's largest energy companies."
+          }
+        ]
+      },
+      {
+        "company": "Evja",
+        "url": "https://www.evja.eu/",
+        "place": "Naples",
+        "dates": "10/2020 – 09/2021",
+        "roles": [
+          {
+            "title": "Junior full-stack engineer",
+            "dates": "10/2020 – 09/2021",
+            "text": "Real-time monitoring and decision-support system for farms, based on AI and IoT."
+          }
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "kicker": "Skills",
+    "title": "What I bring to a team",
+    "groups": [
+      {
+        "title": "Leadership and delivery",
+        "items": [
+          "stakeholder management",
+          "Agile/Scrum",
+          "hiring and onboarding",
+          "1:1s and mentoring",
+          "estimation and pre-sales",
+          "release management"
+        ]
+      },
+      {
+        "title": "AI engineering",
+        "items": [
+          "LLMs",
+          "agents and subagents",
+          "Claude Code and Agent SDK",
+          "MCP",
+          "RAG",
+          "multi-agent systems",
+          "prompt and context design",
+          "structured outputs",
+          "review of generated code"
+        ]
+      },
+      {
+        "title": "Architecture and cloud",
+        "items": [
+          "microservices",
+          "AWS serverless",
+          "infrastructure as code (Terraform)",
+          "Docker",
+          "Kubernetes",
+          "data pipelines",
+          "CI/CD",
+          "relational databases"
+        ]
+      },
+      {
+        "title": "Languages",
+        "items": [
+          "TypeScript",
+          "Java",
+          "C#/.NET",
+          "Python",
+          "Go"
+        ]
+      }
+    ],
+    "educationTitle": "Education",
+    "education": "Full Stack Open; Java Programming I & II – University of Helsinki (online), 2020"
+  },
+  "projects": {
+    "kicker": "Projects",
+    "title": "Outside of work",
+    "intro": "In my spare time I apply the same method to my own projects: I decide what to build and how, AI agents write the code, and I own the result.",
+    "items": [
+      {
+        "name": "A homelab run with AI agents",
+        "status": "Running",
+        "text": "Two servers: a home server for virtualization and home automation, and a cloud server with self-hosted services. I administer them with Claude Code, treating the infrastructure the way I would treat a team.",
+        "highlights": [
+          "Operational documentation written for the agents: current state, reasoned constraints and known pitfalls",
+          "Every documentation update goes through a reviewer subagent and automated checks",
+          "Claude Code connected to Home Assistant via MCP for automations and dashboards",
+          "Nightly encrypted backups to a remote server and a clean shutdown on power outages"
+        ],
+        "tags": [
+          "Proxmox",
+          "Home Assistant",
+          "Matter",
+          "Docker",
+          "Traefik",
+          "restic",
+          "MCP"
+        ]
+      },
+      {
+        "name": "Fiabino",
+        "status": "In closed beta",
+        "text": "An app for families that creates tailor-made bedtime stories with AI. I am building it on my own, from idea to product, leading a team of agents.",
+        "tags": [
+          "Mobile app",
+          "Generative AI",
+          "Claude Code"
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "kicker": "Contact",
+    "title": "Let's talk",
+    "text": "Write to me if you are building or growing an engineering team, if you want to bring AI agents into the way your company ships software, or simply to swap notes.",
+    "email": "Email",
+    "phone": "Phone",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "cv": "CV (PDF)"
+  },
+  "footer": {
+    "made": "Designed by me, built with AI agents.",
+    "source": "Source code"
+  }
+}

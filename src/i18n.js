@@ -1,19 +1,26 @@
-import i18n from "i18next";
+import { createInstance } from "i18next";
 import { initReactI18next } from "react-i18next";
-import LanguageDetector from "i18next-browser-languagedetector";
-import Backend from "i18next-http-backend";
+import it from "./locales/it/translation.json";
+import en from "./locales/en/translation.json";
 
-i18n // eslint-disable-line no-unused-vars
-  .use(Backend)
-  .use(LanguageDetector)
-  .use(initReactI18next)
-  .init({
-    fallbackLng: "en",
-    debug: false,
-    interpolation: {
-      escapeValue: false,
-    },
-    supportedLngs: ["en", "it"],
+export const SITE_URL = "https://salvatoreemilio.it";
+export const languages = ["it", "en"];
+export const languagePath = { it: "/", en: "/en/" };
+
+export function languageFromPath(pathname) {
+  return pathname.startsWith("/en") ? "en" : "it";
+}
+
+// Una istanza per lingua: il prerender genera entrambe le pagine nello stesso processo
+export function createI18n(lng) {
+  const i18n = createInstance();
+  i18n.use(initReactI18next).init({
+    lng,
+    fallbackLng: "it",
+    supportedLngs: languages,
+    resources: { it: { translation: it }, en: { translation: en } },
+    interpolation: { escapeValue: false },
+    initAsync: false,
   });
-
-export default i18n;
+  return i18n;
+}

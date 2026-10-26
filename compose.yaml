@@ -7,11 +7,14 @@ services:
     build: .
     container_name: nginx_portfolio
     restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
       - ./nginx/nginx.default.conf:/etc/nginx/conf.d/default.conf
+    # rete condivisa solo con Traefik (una per servizio, vedi kojinteki docs/ovh/server.md)
     networks:
-      - kojinteki-traefik
+      - kojinteki-traefik-portfolio
     logging:
       driver: "json-file"
       options:
@@ -24,8 +27,8 @@ services:
       - "traefik.http.routers.nginx_portfolio.rule=Host(`salvatoreemilio.it`) || Host(`www.salvatoreemilio.it`)"
       - "traefik.http.routers.nginx_portfolio.tls.certresolver=myresolver"
       - "traefik.http.routers.nginx_portfolio.entrypoints=websecure"
+      - "traefik.docker.network=kojinteki-traefik-portfolio"
 
 networks:
-  kojinteki-traefik:
+  kojinteki-traefik-portfolio:
     external: true
-    name: kojinteki-traefik
